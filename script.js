@@ -38,3 +38,11 @@ function showList() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+function showTask() {
+    showList();
+}
+
+window.onload = showTask;
+
+window.onbeforeunload = saveData;
